@@ -1,0 +1,113 @@
+{
+  "extends": "tslint-config-airbnb",
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**"
+    ]
+  },
+  "rules": {
+    "max-line-length": [
+      true,
+      140
+    ],
+    "ter-indent": [
+      false
+    ],
+    "no-duplicate-variable": true,
+    "trailing-comma": [
+      false
+    ],
+    "newline-before-return": true,
+    "typedef": [
+      true,
+      "call-signature",
+      "arrow-call-signature",
+      "parameter",
+      "arrow-parameter",
+      "property-declaration",
+      "variable-declaration",
+      "member-variable-declaration",
+      "object-destructuring",
+      "array-destructuring"
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-preblock",
+      "check-postbrace",
+      "check-separator",
+      "check-type",
+      "check-type-operator",
+      "check-module"
+    ],
+    "new-parens": true,
+    "import-name": false,
+    "ordered-imports": [
+      true,
+      {
+        "grouped-imports": true,
+        "import-sources-order": "any",
+        "named-imports-order": "case-insensitive",
+        "groups": [
+          {
+            "name": "third-party",
+            "match": "^(?!\\.{1,2}\\/|package-|@actions|@constants|@interfaces|@helpers|@models|@services|@schemas|@mocks).*$",
+            "order": 10
+          },
+          {
+            "name": "packages",
+            "match": "^package-",
+            "order": 20
+          },
+          {
+            "name": "actions",
+            "match": "^(?!.*interfaces)(@actions|\\.{1,2}\\/.*actions).*$",
+            "order": 30
+          },
+          {
+            "name": "schemas",
+            "match": "^(?!.*interfaces)(@schemas|\\.{1,2}\\/.*schemas).*$",
+            "order": 31
+          },
+          {
+            "name": "services",
+            "match": "^(?!.*interfaces)(@services|\\.{1,2}\\/.*services).*$",
+            "order": 32
+          },
+          {
+            "name": "models",
+            "match": "^(?!.*interfaces)(@models|\\.{1,2}\\/.*models).*$",
+            "order": 33
+          },
+          {
+            "name": "helpers",
+            "match": "^(?!.*interfaces)(@helpers|\\.{1,2}\\/.*helpers).*$",
+            "order": 34
+          },
+          {
+            "name": "constants",
+            "match": "^(?!.*interfaces)(@constants|\\.{1,2}\\/.*constants).*$",
+            "order": 35
+          },
+          {
+            "name": "mocks",
+            "match": "^(?!.*interfaces)(@mocks|\\.{1,2}\\/.*mocks).*$",
+            "order": 36
+          },
+          {
+            "name": "project",
+            "match": "^(?!.*interfaces).*$",
+            "order": 37
+          },
+          {
+            "name": "interfaces",
+            "match": "^(@interfaces|\\.{1,2}\\/.*interfaces).*$",
+            "order": 40
+          }
+        ]
+      }
+    ]
+  }
+}
