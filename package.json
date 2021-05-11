@@ -14,7 +14,7 @@
     "test": "node dist/test.js"
   },
   "dependencies": {
-    "lodash": "4.17.15",
+    "lodash": "4.17.21",
     "module-alias": "^2.2.2",
     "rimraf": "3.0.0",
     "typescript": "^3.8.3"
